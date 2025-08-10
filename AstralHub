@@ -1,0 +1,13 @@
+local placeId = game.PlaceId
+
+if placeId == 137925884276740 then
+    -- Build a plane
+    print("Loading Build a plane script...")
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/PlayzlxD0tmatter/Build-a-Plane-Astral-Hub/refs/heads/main/AstralHubBuildAPlane"))()
+elseif placeId == 109983668079237 or placeId == 96342491571673 then
+    -- Steal A Brainrot
+    print("Loading AstralHub Steal A Brainrot script...")
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/PlayzlxD0tmatter/AstralHubStealABrainrot/main/AstralHubStealABrainrot"))()
+else
+    print("No script available for this game:", placeId)
+end
