@@ -1,6 +1,16 @@
 local placeId = game.PlaceId
 
-if placeId == 137925884276740 then
+
+local astralHubPlaceIds = {
+
+    [79546208627805] = true,
+    [126509999114328] = true,
+}
+
+if astralHubPlaceIds[placeId] then
+    print("Loading AstralHub99NightsInAForest script...")
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/PlayzlxD0tmatter/AstralHub99NightsInAForest/refs/heads/main/AstralHub99NightsInAForest"))()
+elseif placeId == 137925884276740 then
     -- Build a plane
     print("Loading Build a plane script...")
     loadstring(game:HttpGet("https://raw.githubusercontent.com/PlayzlxD0tmatter/Build-a-Plane-Astral-Hub/refs/heads/main/AstralHubBuildAPlane"))()
