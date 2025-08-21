@@ -1,22 +1,17 @@
 local placeId = game.PlaceId
 
-local astralHubPlaceIds = {
-    [79546208627805] = true,
-    [126509999114328] = true,
-
+-- Grouped AstralHub IDs
+local astralHubOutdoorsIds = {
     [6839171747] = true,
     [6516141723] = true,
 }
 
--- Always load Outdoors script if matching
-if astralHubPlaceIds[placeId] then
-    print("Loading AstralHub Doors Outdoors script...")
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/PlayzlxD0tmatter/AstralHubDoorsScript/refs/heads/main/AstralHubDoorsOutdoorsScript"))()
-end
-
 if placeId == 79546208627805 or placeId == 126509999114328 then
     print("Loading AstralHub99NightsInAForest script...")
     loadstring(game:HttpGet("https://raw.githubusercontent.com/PlayzlxD0tmatter/AstralHub99NightsInAForest/refs/heads/main/AstralHub99NightsInAForest"))()
+elseif astralHubOutdoorsIds[placeId] then
+    print("Loading AstralHub Doors Outdoors script...")
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/PlayzlxD0tmatter/AstralHubDoorsScript/refs/heads/main/AstralHubDoorsOutdoorsScript"))()
 elseif placeId == 137925884276740 then
     print("Loading Build a plane script...")
     loadstring(game:HttpGet("https://raw.githubusercontent.com/PlayzlxD0tmatter/Build-a-Plane-Astral-Hub/refs/heads/main/AstralHubBuildAPlane"))()
@@ -25,19 +20,8 @@ elseif placeId == 109983668079237 or placeId == 96342491571673 then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/PlayzlxD0tmatter/AstralHubStealABrainrot/main/AstralHubStealABrainrot"))()
 else
     print("No script available for this game:", placeId)
-end
 
-
-if not (
-    astralHubPlaceIds[placeId] or
-    placeId == 79546208627805 or
-    placeId == 126509999114328 or
-    placeId == 137925884276740 or
-    placeId == 109983668079237 or
-    placeId == 96342491571673
-) then
+ 
     print("Loading HuntyZombie Astral Hub script...")
     loadstring(game:HttpGet("https://raw.githubusercontent.com/PlayzlxD0tmatter/HuntyZombie/refs/heads/main/HuntyZombieAstralHubScript"))()
-else
-    print("Skipping HuntyZombie script for this game:", placeId)
 end
