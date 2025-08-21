@@ -27,6 +27,17 @@ else
     print("No script available for this game:", placeId)
 end
 
--- Load HuntyZombieAstralHubScript regardless of PlaceId
-print("Loading HuntyZombie Astral Hub script...")
-loadstring(game:HttpGet("https://raw.githubusercontent.com/PlayzlxD0tmatter/HuntyZombie/refs/heads/main/HuntyZombieAstralHubScript"))()
+
+if not (
+    astralHubPlaceIds[placeId] or
+    placeId == 79546208627805 or
+    placeId == 126509999114328 or
+    placeId == 137925884276740 or
+    placeId == 109983668079237 or
+    placeId == 96342491571673
+) then
+    print("Loading HuntyZombie Astral Hub script...")
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/PlayzlxD0tmatter/HuntyZombie/refs/heads/main/HuntyZombieAstralHubScript"))()
+else
+    print("Skipping HuntyZombie script for this game:", placeId)
+end
