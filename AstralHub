@@ -4,7 +4,6 @@ local astralHubPlaceIds = {
     [79546208627805] = true,
     [126509999114328] = true,
 
-    -- DOORS Outdoors PlaceIds
     [6839171747] = true,
     [6516141723] = true,
 }
@@ -19,13 +18,15 @@ if placeId == 79546208627805 or placeId == 126509999114328 then
     print("Loading AstralHub99NightsInAForest script...")
     loadstring(game:HttpGet("https://raw.githubusercontent.com/PlayzlxD0tmatter/AstralHub99NightsInAForest/refs/heads/main/AstralHub99NightsInAForest"))()
 elseif placeId == 137925884276740 then
-    -- Build a plane
     print("Loading Build a plane script...")
     loadstring(game:HttpGet("https://raw.githubusercontent.com/PlayzlxD0tmatter/Build-a-Plane-Astral-Hub/refs/heads/main/AstralHubBuildAPlane"))()
 elseif placeId == 109983668079237 or placeId == 96342491571673 then
-    -- Steal A Brainrot
     print("Loading AstralHub Steal A Brainrot script...")
     loadstring(game:HttpGet("https://raw.githubusercontent.com/PlayzlxD0tmatter/AstralHubStealABrainrot/main/AstralHubStealABrainrot"))()
 else
     print("No script available for this game:", placeId)
 end
+
+-- Load HuntyZombieAstralHubScript regardless of PlaceId
+print("Loading HuntyZombie Astral Hub script...")
+loadstring(game:HttpGet("https://raw.githubusercontent.com/PlayzlxD0tmatter/HuntyZombie/refs/heads/main/HuntyZombieAstralHubScript"))()
