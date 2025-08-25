@@ -18,6 +18,9 @@ elseif placeId == 137925884276740 then
 elseif placeId == 109983668079237 or placeId == 96342491571673 then
     print("Loading AstralHub Steal A Brainrot script...")
     loadstring(game:HttpGet("https://raw.githubusercontent.com/PlayzlxD0tmatter/AstralHubStealABrainrot/main/AstralHubStealABrainrot"))()
+elseif placeId == 121864768012064 or placeId == 121864768012064 then
+    print("Loading AstralHub fish it script...")
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/PlayzlxD0tmatter/FishitAstralHub/refs/heads/main/FishItAstralHub"))()
 else
     print("No script available for this game:", placeId)
 
